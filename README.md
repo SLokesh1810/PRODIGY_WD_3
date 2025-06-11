@@ -2,4 +2,4 @@ TIC TAC TOE
 
   A webisite for playing tic-tac-toe with your friends. It has a dark and vibrant interface. An image of the website is shared below.
 
-  <img src="(https://github.com/user-attachments/assets/17bd570b-afc2-4d45-85bb-9b1894d7ac88" width="200" height="100">
+  ![Screenshot 2025-06-11 162148](https://github.com/user-attachments/assets/9ee70ee0-24fa-4474-837a-45db787db50e)
