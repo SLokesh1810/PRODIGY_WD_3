@@ -47,6 +47,30 @@
             margin: auto;
             align-self: center;
         }
+
+        .reset {
+            width: 100%;
+            text-align: center;
+        }
+
+        .resetBtn{
+            margin-bottom: 20px;
+            padding: 10px;
+            font-size: 20px;
+            background-color: black;
+            color: aqua;
+            box-shadow: 0 0 7px aliceblue;
+            border-radius: 10px;
+            border: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .resetBtn:hover {
+            background-color: aqua;
+            color: aliceblue;
+            text-shadow: 0 0 5px black;
+        }
+
         .gameBoard table{
             align-self: center;
             margin: auto;
@@ -80,6 +104,7 @@
             Wins: <span id="p1Wins">0</span>
         </div>
         <div class="gameBoard">
+            <div class="reset"><button class="resetBtn" onclick="reset()">Reset</button></div>
             <table>
                 <tr>
                     <td id="b1" onclick="boxSelect(1)"></td>
@@ -122,15 +147,19 @@
             );
         }
 
-        function updateWins(){
-            p1wins.textContent = p1w;
-            p2wins.textContent = p2w;
+        function reset() {
             selected.forEach(element => {
                 document.getElementById(`b${element}`).textContent = '';
             });
             selected = [];
             p1moves = [];
             p2moves = [];
+        }
+
+        function updateWins(){
+            p1wins.textContent = p1w;
+            p2wins.textContent = p2w;
+            reset();
         }
 
         function boxSelect(num) { 
